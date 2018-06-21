@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title >Handbook Inc</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/hblogo.png') }}" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/materialize.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/materialize.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="{{ url_for('static', filename='js/modals.js') }}"></script>
+</head>
+<body>
+<header class="top-bar _fixed">
+    <div class="-container">
+        <img src="{{ url_for('static', filename='img/hblogo.png') }}" class="-HBlogo">
+        <div class="ProjectTitle">Handbook</div>
+        <button type="button" class="waves-effect waves-teal btn-flat btn-small btn-login" data-toggle="modal" data-target="#loginModal">Login</button>
+        <button type="button" class="waves-effect waves-teal btn-flat btn-small btn-reg" data-toggle="modal" data-target="#regModal">Register</button>
+    </div>
+</header>
+
+
+<!--
+New Footer design goes here. For time being, bellow footer is used..
+-->
+
+<!--<div id="foot" class="footer">
+    <footer>
+        <img src="./img/hblogo.png" class="-footLogo">
+        <a class="-footCopyRight" href="www.handbookinc.com">
+            <span>Handbook</span>
+        </a>
+        <div>
+            <span><span class="-copyRight">© 2018 Handbook Inc</span></span>
+        </div>
+        <div class="HB-Container">
+            <div class="HB-Row">
+                <div class="-foot-col-abt">
+                    <h5>What's new</h5>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>-->
+
+
+<div class="footer">
+    <div class="HB-Container">
+        <div class="HB-Row">
+            <div class="col-xs-2">
+                <h6 class="white-text ">About Us</h6>
+                <ul class="-font">
+                    <li><a class="grey-text text-lighten-3" href="#!">Our Story</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Press</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Work Here</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Legal</a></li>
+                    <li><a class="grey-text text-lighten-5" href="#!">Privacy Policy</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="HB-Row">
+            <div class="col-xs-1">
+                <h6 class="white-text">Find Us</h6>
+                <ul class="-font">
+                    <li><a class="grey-text text-lighten-3" href="#!">About</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Press</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Work Here</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Legal</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<!-- Footer -->
+
+<!-- Modal for login starts here... -->
+
+<div class="modal" id="loginModal" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div>
+        <div class="-modal-header">
+            <button type="button" class="-close" data-dismiss="modal" aria-label="Close">&times;</button>
+            <h6 id="loginModalLabel" class="topo">Login</h6>
+        </div>
+        <div class="modal-body">
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="user-name"><span class="glyphicon glyphicon-user"></span>Username:</label>
+                    <input type="text" class="form-control" id="user-name" placeholder="sam">
+                </div>
+                <div class="form-group">
+                    <label for="password"><span class="glyphicon"></span>Password:</label>
+                    <input type="password" class="form-control" id="password">
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                <i class="material-icons right">close</i>
+            </button>
+            <button class="btn waves-effect waves-light" type="button" id="loginBtn" onclick="submitForm()">Login
+                <i class="material-icons right">send</i>
+            </button>
+            <button class="btn waves-effect waves-light" type="reset" id="refreshLogin">Refresh
+                <i class="material-icons right">refresh</i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Sign Up starts here... -->
+
+<div class="modal fade" id="regModal" role="dialog" aria-labelledby="regModalLable" aria-hidden="true">
+    <div>
+        <div class="-modal-header">
+            <button type="button" class="-close" data-dismiss="modal" aria-label="Close">&times;</button>
+            <h6 id="regModalLable" class="topo">Register</h6>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="first-name" placeholder="FirstName">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="last-name" placeholder="LastName">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="u-name" placeholder="UserName">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="pwd" placeholder="Password">
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                <i class="material-icons right">close</i>
+            </button>
+            <button type="button" class="btn waves-effect waves-light"  id="regBtn">Login
+                <i class="material-icons right">send</i>
+            </button>
+            <button class="btn waves-effect waves-light" type="reset" id="refreshRegister">Refresh
+                <i class="material-icons right">refresh</i>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+</html>

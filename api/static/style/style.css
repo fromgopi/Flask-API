@@ -1,0 +1,208 @@
+.top-bar{
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 1020;
+    background-color: #fafafb;
+    transition: box-shadow cubic-bezier(.165, .84, .44, 1) .25s;
+    height: 50px;
+    box-sizing: border-box;
+    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+}
+
+.top-bar-main{
+    border-top:3px solid #F48024;
+    box-shadow:0 1px 0 rgba(12,13,14,0.15)}
+
+.top-bar._fixed{
+    position: fixed;
+    min-width: auto;
+    box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 6px rgba(59,64,69,0.1);
+}
+
+.header-main{
+    width: 100%;
+    height: 90px;
+    background-color: white;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.7);
+}
+
+.-HBlogo{
+    transition: background-color ease-in-out .25s;
+    width: 12%;
+    height: 70%;
+    position : relative;
+    top: 0px;
+    right: 7%;
+    object-fit: contain;
+}
+
+.ProjectTitle{
+    position: absolute;
+    right: 89%;
+    font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+    font-size: 19px;
+    color: #000000;
+    margin: 10px;
+    bottom: 0%;
+}
+
+button.btn-login{
+    position: absolute;
+    font-family: Montserrat;
+    top: 14%;
+    left: 89%;
+}
+
+a.modal-href{
+    position: relative;
+    font-family: Montserrat;
+    top: 11%;
+    bottom: 20%;
+    left: 25%;
+    width: 25%;
+    object-fit: contain;
+}
+
+
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #242729;
+    text-align: center;
+}
+
+
+.HB-Container{
+    width: 100%;
+}
+.HB-Row{
+    margin: auto 1%;
+}
+
+.top-bar .-container {
+    max-width: 1058px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 15px;
+    box-sizing: content-box;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.navbar {
+    padding: 20px 0;
+    margin-bottom: 20px;
+    width: 100%;
+    height: auto;
+    background-color: #2196F3;
+}
+
+button.btn-reg{
+    position: absolute;
+    left: 96%;
+    font-family: Montserrat;
+}
+
+.top-bar {
+    border-top: 3px solid #F48024;
+    box-shadow: 0 1px 0 rgba(12, 13, 14, 0.15)
+}
+
+.central-modal{
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: #fafafa;
+    padding: 0;
+    max-height: 70%;
+    width: 55%;
+    margin: auto;
+    overflow-y: auto;
+    border-radius: 2px;
+    will-change: top, opacity;
+}
+
+.modal .-modal-header{
+    padding: 12px;
+    border-bottom: 1px wave #e5e5e5;
+    background-color: #00b8d4;
+}
+
+button.-close{
+    float: right;
+    font-size: 200%;
+    font-weight: 200;
+    line-height: 1;
+    color: black;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: .5;
+    border: 0;
+    padding: 0px;
+    cursor: pointer;
+    background: 0 0;
+}
+
+.topo{
+    text-align: center;
+}
+
+.footer .-font{
+    font-size: 12px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.footer .-footLogo{
+    transition: background-color ease-in-out .25s;
+    width: 2.7%;
+    position : relative;
+    top: 0px;
+    right: 37%;
+    object-fit: contain;
+}
+
+.footer .-footCopyRight{
+    position: absolute;
+    left: 14%;
+    font-size: 16px;
+    margin: 9px;
+}
+
+.-copyRight{
+    position : relative;
+    bottom: -5px;
+    right: 33%;
+}
+
+.-social-plugins{
+    margin: 0 1.9rem 0;
+    width: 13.8rem;
+}
+
+.-social-plugins li{
+    display: block;
+    min-width: 3rem;
+    position: relative;
+}
+
+.-foot-col-abt{
+    width: 60%;
+
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+}
